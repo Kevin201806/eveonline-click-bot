@@ -69,11 +69,11 @@ if __name__ == '__main__':
     # EVE频道日志的绝对位置
     logpath = "c://users//18201//Documents//EVE//logs//Chatlogs//"
     # 如果存在列表内的词则忽略
-    Mask_list = ["置顶","野生","预定","测试","维纳尔","自己","工具","签约","找个","test","有人","出吗","脚本","出么"]
+    mask_list = ["置顶","野生","预定","测试","维纳尔","自己","工具","签约","找个","test","有人","出吗","脚本","出么"]
     # 频道名称
     chatname = "Escalation 静寂谷"
     while True:
-        AAA = take_log(chatname, spec_word_list, logpath, Mask_list)
+        AAA = take_log(chatname, spec_word_list, logpath, mask_list)
         if AAA == "click":
             # 在屏幕的绝对坐标输入1
             write_and_click(390, 593, "1")
