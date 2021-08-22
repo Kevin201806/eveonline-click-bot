@@ -57,13 +57,13 @@ if __name__ == '__main__':
     map_basic_url = "https://evemaps.dotlan.net"
     url_dict = creat_star_field_dic(map_basic_url)
 
-    # 为节省时间,直接将字典写于此
-
     # 创建星系列表
     for name in url_dict:
         url = url_dict[name]["url"]
         print(name + ": " + url)
         glaxy_dict = get_glaxy_list(url)
         url_dict[name]["glaxy_dict"] = glaxy_dict
+        
+        
     print(glaxy_dict)
 
