@@ -73,22 +73,12 @@ def check_spec_word(talk_th, spec_word_list, Mask_list):
     for A in talk_th:
         if A != '' or A != ' ':
             AAlist.append(A)
-    # chTYPE = False
-    # for a in AAlist:
-    #     if is_english_char(a) == False:
-    #         # print(str(a) + " is chinese")
-    #         chTYPE = True
-    #         break
-    # print(chTYPE)
     typeB = False
     for AAAA in AAlist:
         if AAAA in spec_word_list:
             typeB = True
             # print(talk_th)
             break
-    # print(chTYPE)
-    # print(typeB)
-    # if typeB == True and chTYPE == False:
     if typeB == True:
         print("含有关键词, 开始匹配: " + str(talk_th))
         galaxy = ""
@@ -124,8 +114,7 @@ def check_spec_word(talk_th, spec_word_list, Mask_list):
 if __name__ == '__main__':
     punc = string.punctuation
     # 需要匹配的关键词
-    spec_word_list = ["6/10", "10/10", "6-10", "10-10", "1010","10","maze","Maze"]
-    # spec_word_list = ["10/10", "10-10","1010"]
+    spec_word_list = ["6/10", "10/10", "6-10", "10-10", "1010", "10", "maze", "Maze"]
     # EVE频道日志的绝对位置
     logpath = "c://users//18201//Documents//EVE//logs//Chatlogs//"
     # 如果存在列表内的词则忽略
@@ -185,10 +174,10 @@ if __name__ == '__main__':
                         write_and_click(617, 612, "1", rand_num)
                         time.sleep(5)
                         os.system("hp.wav")
-                # else:
-                #     write_and_click(373, 609, "1", rand_num)
-                #     time.sleep(5)
-                #     os.system("hp.wav")
+                    # else:
+                    #     write_and_click(373, 609, "1", rand_num)
+                    #     time.sleep(5)
+                    #     os.system("hp.wav")
                 # write_and_click(394, 609, "1", 0.8)
                 with open("point_his.txt", "a") as point_his:
                     point_his.write(str(gmtimes) + "\n")
