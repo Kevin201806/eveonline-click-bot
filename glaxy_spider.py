@@ -1,7 +1,6 @@
 import codecs
 import requests
 from bs4 import BeautifulSoup
-from some_dict import glaxy_dict, url_dict
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
@@ -55,19 +54,16 @@ def creat_star_field_dic(url):
 
 if __name__ == '__main__':
     # 获取星域网址字典
-    # map_basic_url = "https://evemaps.dotlan.net"
-    # url_dict = creat_star_field_dic(map_basic_url)
+    map_basic_url = "https://evemaps.dotlan.net"
+    url_dict = creat_star_field_dic(map_basic_url)
 
     # 为节省时间,直接将字典写于此
-    url_dict = url_dict
 
     # 创建星系列表
-    # for name in url_dict:
-    #     url = url_dict[name]["url"]
-    #     print(name + ": " + url)
-    #     glaxy_dict = get_glaxy_list(url)
-    #     url_dict[name]["glaxy_dict"] = glaxy_dict
-    glaxy_dict = glaxy_dict
-
+    for name in url_dict:
+        url = url_dict[name]["url"]
+        print(name + ": " + url)
+        glaxy_dict = get_glaxy_list(url)
+        url_dict[name]["glaxy_dict"] = glaxy_dict
     print(glaxy_dict)
 
